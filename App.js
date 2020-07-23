@@ -1,21 +1,28 @@
-import { StatusBar } from 'expo-status-bar';
-import React from 'react';
-import { StyleSheet, Text, View } from 'react-native';
-
-export default function App() {
-  return (
-    <View style={styles.container}>
-      <Text>Open up App.js to start working on your app!</Text>
-      <StatusBar style="auto" />
-    </View>
-  );
+import React from 'react'
+import {View,Text,StyleSheet} from 'react-native'
+import MapView,{PROVIDER_GOOGLE} from 'react-native-maps';
+class App extends React.Component{
+  constructor(){
+    super()
+  }
+  render(){
+    return(
+      <View style={styles.container}>
+        <Text>Hello world</Text>
+        <MapView
+          provider={PROVIDER_GOOGLE}
+          style={styles.container}
+        />
+      </View>
+    )
+  }
 }
-
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
+    justifyContent: "center",
+    alignItems: "center",
+    backgroundColor: "#F5FCFF"
   },
 });
+export default App
